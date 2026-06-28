@@ -53,6 +53,13 @@ const faqs: { question: string; answer: string }[] = [
     },
 ];
 
+const cardReveal = (delay: number) => ({
+    initial: { opacity: 0, y: 24, scale: 0.96 },
+    whileInView: { opacity: 1, y: 0, scale: 1 },
+    viewport: { once: true },
+    transition: { duration: 0.6, delay, ease: "easeOut" as const },
+});
+
 export default function FAQSection() {
     return (
         <div id="faq" className="relative min-h-screen bg-[#F8ECCD] mx-8 my-4 py-12">
@@ -96,7 +103,10 @@ export default function FAQSection() {
                 />
             </motion.div>
 
-            <div className="relative z-10 flex flex-col items-center mt-10">
+            <motion.div
+                whileHover={{ scale: 1.015 }}
+                {...cardReveal(0)}
+                className="relative z-10 flex flex-col items-center mt-10">
                 <h1 className="prose font-heading faq-heading mb-10 text-[#AD5A2C] text-4xl md:text-5xl">
                     Frequently Asked Questions
                 </h1>
@@ -121,7 +131,7 @@ export default function FAQSection() {
                         ))}
                     </Accordion>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

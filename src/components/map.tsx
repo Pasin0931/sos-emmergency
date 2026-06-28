@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 
+import { isDayUnlocked, unlockLabel } from "@/lib/daylib"
+
 const days = [
     { day: 1, subtitle: "Day 1", mascot: "/croc.png", left: "8%", top: "20%" },
     { day: 2, subtitle: "Day 2", mascot: "/monkey.png", left: "35%", top: "75%" },
@@ -21,7 +23,11 @@ export default function NavigateSection() {
                 className="absolute inset-0 opacity-15 object-cover pointer-events-none select-none"
             />
 
-            <div className="relative z-10 max-w-6xl mx-auto text-center pt-15">
+            <motion.div className="relative z-10 max-w-6xl mx-auto text-center pt-15"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
                 <h2 className="font-bold text-5xl md:text-6xl text-[#AD5A2C]">Chart Your Course</h2>
                 <p className="mt-3 text-lg md:text-xl text-[#6E4220] font-medium pb-8">
                     Four days, four stops - every code pirate sails the same route.
@@ -40,61 +46,49 @@ export default function NavigateSection() {
                         />
                     </svg>
 
-                    <motion.div
-                        className="absolute pointer-events-none"
-                        style={{ width: 44, height: 44, marginLeft: -22, marginTop: -22 }}
-                        animate={{
-                            left: ["8%", "35%", "65%", "92%", "65%", "35%", "8%"],
-                            top: ["20%", "75%", "20%", "75%", "20%", "75%", "20%"],
-                            rotate: [0, 10, -10, 10, -10, 10, 0],
-                        }}
-                        transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
-                    >
-                        {/* <Image src="/ship.png" alt="" width={44} height={44} className="select-none" draggable={false} /> */}
-                    </motion.div>
+                    {days.map((d, i) => {
+                        const unlocked = isDayUnlocked(d.day);
 
-                    {days.map((d, i) => (
-                        <motion.div
-                            key={d.day}
-                            className="absolute"
-                            style={{ left: d.left, top: d.top }}
-                            initial={{ opacity: 0, scale: 0.6 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                        //   transition={{ delay: i * 0.15, type: "spring", stiffness: 260, damping: 18 }}
-                        //   whileHover={{ scale: 1.08, rotate: -3 }}
-                        >
-                            <Link href={`/problems/${d.day}`} className="flex flex-col items-center -translate-x-1/2 -translate-y-1/2 group">
-                                <div className="relative flex flex-col items-center justify-center w-28 h-28 rounded-full border-4 border-[#58361B] bg-[#9C5F33] text-[#F8ECCD] shadow-lg group-hover:bg-[#6E4220] transition-colors">
-                                    <span className="text-3xl font-bold">{d.day}</span>
-                                    {/* <Image src={d.mascot} alt="" width={32} height={32} className="select-none" draggable={false} /> */}
-                                </div>
-                                <span className="mt-2 px-6 py-1 rounded-md bg-[#9C5F33] border-3 border-[#58361B] text-[#F8ECCD] text-sm font-bold whitespace-nowrap shadow-lg group-hover:bg-[#6E4220] transition-colors">
-                                    {d.subtitle}
-                                </span>
-                            </Link>
-                        </motion.div>
-                    ))}
+                        return (
+                            <motion.div
+                                key={d.day}
+                                className="absolute"
+                                style={{ left: d.left, top: d.top }}
+                                initial={{ opacity: 0, scale: 0.6 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3, delay: i * 0.15, ease: "easeOut" }}
+                            >
+                                {unlocked ? (
+                                    <Link href={`/problems/${d.day}`} className="flex flex-col items-center -translate-x-1/2 -translate-y-1/2 group">
+                                        <div className="relative flex flex-col items-center justify-center w-28 h-28 rounded-full border-4 border-[#58361B] bg-[#9C5F33] text-[#F8ECCD] shadow-lg group-hover:bg-[#6E4220] transition-colors">
+                                            <span className="text-3xl font-bold">{d.day}</span>
+                                        </div>
+                                        <span className="mt-2 px-6 py-1 rounded-md bg-[#9C5F33] border-3 border-[#58361B] text-[#F8ECCD] text-sm font-bold whitespace-nowrap shadow-lg group-hover:bg-[#6E4220] transition-colors">
+                                            {d.subtitle}
+                                        </span>
+                                    </Link>
+                                ) : (
+                                    <div
+                                        className="flex flex-col items-center -translate-x-1/2 -translate-y-1/2 cursor-not-allowed select-none"
+                                        title={`Unlocks ${unlockLabel(d.day)}`}
+                                    >
+                                        <div className="relative flex flex-col items-center justify-center w-28 h-28 rounded-full border-4 border-[#58361B] bg-black text-gray-500 shadow-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+                                                <path fillRule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clipRule="evenodd" />
+                                            </svg>
+                                        </div>
+                                        <span className="mt-2 px-6 py-1 rounded-md bg-black border-3 border-[#58361B] text-gray-500 text-sm font-bold whitespace-nowrap shadow-lg">
+                                            {d.subtitle}
+                                        </span>
+                                    </div>
+                                )}
+                            </motion.div>
+                        );
+                    })}
                 </div>
 
-                <div className="md:hidden flex flex-col gap-5 mt-12">
-                    {days.map((d) => (
-                        <Link
-                            key={d.day}
-                            href={`/problems/${d.day}`}
-                            className="flex items-center gap-4 pl-2 border-l-4 border-dashed bg-[#9C5F33]"
-                        >
-                            <div className="flex items-center justify-center w-14 h-14 rounded-full border-2 border-[#58361B] bg-[#9C5F33] text-[#F8ECCD] font-bold text-lg shrink-0 -ml-7">
-                                {d.day}
-                            </div>
-                            <div className="flex-1 flex items-center justify-between bg-[#9C5F33] text-[#F8ECCD] rounded-2xl border-2 border-[#58361B] px-8 py-3">
-                                <p className="font-bold">{d.subtitle}</p>
-                                {/* <Image src={d.mascot} alt="" width={36} height={36} className="select-none" draggable={false} /> */}
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

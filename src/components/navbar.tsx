@@ -29,7 +29,7 @@ export default function Navbar() {
                     ))}
                 </div>
             </nav>
-            <div className="bg-[#8f5a2f] w-screen h-2"></div>
+            <div className="bg-[#8f5a2f] w-full h-2"></div>
         </div>
     );
 }

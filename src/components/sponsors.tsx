@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 
 const sponsors = [
-    { name: "Scuba", logo: "/Scuba.png" },
-    { name: "Lactasoy", logo: "/Lactasoy_logo.png" },
-    { name: "Koh-Kae", logo: "/koh-kae.png" },
+    { name: "Skuba", logo: "/Scuba.png", link_: "https://www.facebook.com/skubafanpageku/?locale=th_TH" },
+    { name: "Lactasoy", logo: "/Lactasoy_logo.png", link_: "https://www.lactasoy.com/" },
+    { name: "Koh-Kae", logo: "/koh-kae.png", link_: "https://www.kohkae.com/" },
 ];
 
 export default function SponsorSection() {
@@ -30,6 +30,7 @@ export default function SponsorSection() {
                             whileHover={{ rotate: 0, scale: 1.1 }}
                             key={s.name}
                             className="bg-[#F8ECCD] rounded-2xl border-2 border-[#58361B] flex flex-col items-center justify-center w-75 py-10"
+                            onClick={() => window.open(s.link_, '_blank')}
                         >
                             <Image
                                 src={s.logo}
