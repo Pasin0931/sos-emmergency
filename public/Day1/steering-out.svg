@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+    
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+
+    <g stroke="#6B4423" stroke-width="6" fill="none">
+      <circle cx="128" cy="128" r="44" fill="#B5651D"/>
+      <circle cx="128" cy="128" r="20" fill="#FBF3DE"/>
+    </g>
+    <circle cx="128" cy="128" r="9" fill="#6B4423"/>
+    <g stroke="#6B4423" stroke-width="6">
+      <line x1="128" y1="128" x2="204.0" y2="128.0"/><circle cx="200.0" cy="128.0" r="9" fill="#8B5E34"/><line x1="128" y1="128" x2="181.7401510212212" y2="181.74007971911038"/><circle cx="178.9117220201043" cy="178.91165447073615" r="9" fill="#8B5E34"/><line x1="128" y1="128" x2="128.00010083641214" y2="203.9999999999331"/><circle cx="128.00009552923257" cy="199.99999999993662" r="9" fill="#8B5E34"/><line x1="128" y1="128" x2="74.25999158309506" y2="181.74022232323742"/><circle cx="77.08841307872163" cy="178.91178956938282" r="9" fill="#8B5E34"/><line x1="128" y1="128" x2="52.000000000267576" y2="128.0002016728243"/><circle cx="56.00000000025349" cy="128.00019105846513" r="9" fill="#8B5E34"/><line x1="128" y1="128" x2="74.25970637484099" y2="74.26006288539506"/><circle cx="77.0881428814283" cy="77.088480628269" r="9" fill="#8B5E34"/><line x1="128" y1="128" x2="127.99969749076352" y2="52.00000000060206"/><circle cx="127.99971341230228" cy="56.00000000057037" r="9" fill="#8B5E34"/><line x1="128" y1="128" x2="181.7398658122103" y2="74.25963507301395"/><circle cx="178.91145182209397" cy="77.088075332329" r="9" fill="#8B5E34"/>
+    </g>
+
+  </g>
+</svg>
