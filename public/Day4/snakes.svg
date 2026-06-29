@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Snake S-curve body -->
+    <path d="M90,80 Q140,80 140,110 Q140,140 88,140 Q60,140 70,165 Q82,185 110,180"
+          fill="none" stroke="#6B7A99" stroke-width="14"/>
+    <!-- Snake body pattern overlay (lighter) -->
+    <path d="M90,80 Q140,80 140,110 Q140,140 88,140 Q60,140 70,165 Q82,185 110,180"
+          fill="none" stroke="#FBF3DE" stroke-width="5" stroke-dasharray="10 12"/>
+    <!-- Snake head at top -->
+    <ellipse cx="84" cy="74" rx="14" ry="11" fill="#6B7A99" stroke="#6B4423" stroke-width="4" transform="rotate(-20 84 74)"/>
+    <!-- Snake eye -->
+    <circle cx="80" cy="70" r="3" fill="#FBF3DE"/>
+    <circle cx="80" cy="70" r="1.5" fill="#6B4423"/>
+    <!-- Forked tongue -->
+    <line x1="73" y1="68" x2="62" y2="62" stroke="#E59BB5" stroke-width="3"/>
+    <line x1="62" y1="62" x2="56" y2="56" stroke="#E59BB5" stroke-width="3"/>
+    <line x1="62" y1="62" x2="58" y2="68" stroke="#E59BB5" stroke-width="3"/>
+    <!-- Tail end -->
+    <path d="M110,180 L124,172" stroke="#6B7A99" stroke-width="8" stroke-linecap="round"/>
+    <path d="M124,172 L132,178" stroke="#6B7A99" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>

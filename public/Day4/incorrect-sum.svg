@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Equals sign -->
+    <line x1="90" y1="120" x2="166" y2="120" stroke="#6B4423" stroke-width="8"/>
+    <line x1="90" y1="136" x2="166" y2="136" stroke="#6B4423" stroke-width="8"/>
+    <!-- Bold X overlaid on the equals sign -->
+    <line x1="96" y1="104" x2="160" y2="152" stroke="#B5651D" stroke-width="9"/>
+    <line x1="160" y1="104" x2="96" y2="152" stroke="#B5651D" stroke-width="9"/>
+    <!-- White circle background to make X prominent -->
+    <circle cx="128" cy="128" r="32" fill="none" stroke="#E59BB5" stroke-width="4" opacity="0.6"/>
+  </g>
+</svg>

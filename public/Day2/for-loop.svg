@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Rectangular loop arrow -->
+    <!-- Top segment (left to right, with gap for arrow head) -->
+    <line x1="80" y1="82" x2="176" y2="82" stroke="#6B4423" stroke-width="6"/>
+    <!-- Right segment (top to bottom) -->
+    <line x1="176" y1="82" x2="176" y2="174" stroke="#6B4423" stroke-width="6"/>
+    <!-- Bottom segment (right to left) -->
+    <line x1="176" y1="174" x2="80" y2="174" stroke="#6B4423" stroke-width="6"/>
+    <!-- Left segment (bottom going up, stops before top to show direction) -->
+    <line x1="80" y1="174" x2="80" y2="96" stroke="#6B4423" stroke-width="6"/>
+    <!-- Arrow head pointing right on top -->
+    <polygon points="176,76 162,84 162,68" fill="#6B4423" stroke="#6B4423" stroke-width="2"/>
+    <!-- Small dot/circle in center indicating current item -->
+    <circle cx="128" cy="128" r="14" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <circle cx="128" cy="128" r="5" fill="#6B4423"/>
+  </g>
+</svg>

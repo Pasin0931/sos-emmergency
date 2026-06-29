@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Cheese wedge (triangle) -->
+    <polygon points="128,72 188,168 68,168" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <!-- Cheese holes -->
+    <circle cx="128" cy="140" r="9" fill="#F1E3C2" stroke="#6B4423" stroke-width="3"/>
+    <circle cx="110" cy="155" r="6" fill="#F1E3C2" stroke="#6B4423" stroke-width="3"/>
+    <circle cx="148" cy="152" r="7" fill="#F1E3C2" stroke="#6B4423" stroke-width="3"/>
+    <!-- No/ban circle overlay -->
+    <circle cx="128" cy="128" r="56" fill="none" stroke="#6B4423" stroke-width="8"/>
+    <!-- Diagonal slash -->
+    <line x1="88" y1="88" x2="168" y2="168" stroke="#6B4423" stroke-width="8"/>
+  </g>
+</svg>

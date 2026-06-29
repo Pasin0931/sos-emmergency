@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Larger speech bubble (bottom-left) -->
+    <path d="M72 100 Q72 78 94 78 L158 78 Q180 78 180 100 L180 140 Q180 162 158 162 L106 162 L88 182 L92 162 Q72 162 72 140 Z" fill="#E59BB5" stroke="#6B4423" stroke-width="5"/>
+    <!-- Text lines inside large bubble -->
+    <line x1="96" y1="108" x2="156" y2="108" stroke="#6B4423" stroke-width="5"/>
+    <line x1="96" y1="124" x2="148" y2="124" stroke="#6B4423" stroke-width="5"/>
+    <line x1="96" y1="140" x2="140" y2="140" stroke="#6B4423" stroke-width="5"/>
+    <!-- Smaller speech bubble (top-right, overlapping) -->
+    <path d="M136 64 Q136 48 150 48 L192 48 Q206 48 206 64 L206 90 Q206 106 192 106 L172 106 L174 120 L160 106 Q136 106 136 90 Z" fill="#FBF3DE" stroke="#6B4423" stroke-width="4"/>
+    <!-- Text lines inside small bubble -->
+    <line x1="148" y1="68" x2="194" y2="68" stroke="#6B4423" stroke-width="4"/>
+    <line x1="148" y1="82" x2="186" y2="82" stroke="#6B4423" stroke-width="4"/>
+  </g>
+</svg>

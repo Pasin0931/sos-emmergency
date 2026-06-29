@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Function box -->
+    <rect x="88" y="100" width="80" height="56" rx="8" ry="8" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <!-- "f" symbol inside the box -->
+    <path d="M118 118 Q118 112 124 112 L130 112" fill="none" stroke="#6B4423" stroke-width="5"/>
+    <line x1="118" y1="118" x2="118" y2="142" stroke="#6B4423" stroke-width="5"/>
+    <line x1="112" y1="128" x2="126" y2="128" stroke="#6B4423" stroke-width="5"/>
+    <!-- Input arrow from left -->
+    <line x1="50" y1="128" x2="85" y2="128" stroke="#6B4423" stroke-width="5"/>
+    <polygon points="88,128 76,121 76,135" fill="#6B4423"/>
+    <!-- Output arrow to right -->
+    <line x1="171" y1="128" x2="205" y2="128" stroke="#6B4423" stroke-width="5"/>
+    <polygon points="208,128 196,121 196,135" fill="#6B4423"/>
+    <!-- Small input dot -->
+    <circle cx="50" cy="128" r="5" fill="#8B5E34"/>
+    <!-- Small output dot -->
+    <circle cx="208" cy="128" r="5" fill="#B5651D"/>
+  </g>
+</svg>

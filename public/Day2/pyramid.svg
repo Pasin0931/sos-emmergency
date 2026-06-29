@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Row 1 (top): 1 block -->
+    <rect x="110" y="72" width="36" height="28" rx="4" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <!-- Row 2: 2 blocks -->
+    <rect x="74" y="108" width="36" height="28" rx="4" fill="#B5651D" stroke="#6B4423" stroke-width="5"/>
+    <rect x="146" y="108" width="36" height="28" rx="4" fill="#B5651D" stroke="#6B4423" stroke-width="5"/>
+    <!-- Row 3: 3 blocks -->
+    <rect x="56" y="144" width="34" height="28" rx="4" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <rect x="111" y="144" width="34" height="28" rx="4" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <rect x="166" y="144" width="34" height="28" rx="4" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <!-- Row 4 (bottom): 4 blocks -->
+    <rect x="42" y="180" width="30" height="22" rx="4" fill="#8B5E34" stroke="#6B4423" stroke-width="4"/>
+    <rect x="84" y="180" width="30" height="22" rx="4" fill="#8B5E34" stroke="#6B4423" stroke-width="4"/>
+    <rect x="126" y="180" width="30" height="22" rx="4" fill="#8B5E34" stroke="#6B4423" stroke-width="4"/>
+    <rect x="168" y="180" width="30" height="22" rx="4" fill="#8B5E34" stroke="#6B4423" stroke-width="4"/>
+  </g>
+</svg>

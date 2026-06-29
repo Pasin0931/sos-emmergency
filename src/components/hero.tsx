@@ -84,6 +84,13 @@ export default function HeroSection() {
                     <Link href="/problems" className="block h-full">
                         <BentoCard className="h-85 justify-center bg-[#9C5F33] hover:bg-[#6E4220] transition-colors group">
                             <motion.div
+                                className="absolute right-40 bottom-0 pointer-events-none"
+                                animate={{ y: [0, -5, 0], rotate: [-10, -6, -10] }}
+                                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                            >
+                                <Image src="/Mascot.png" alt="" width={120} height={120} className="w-20 md:w-28 h-auto opacity-90" />
+                            </motion.div>
+                            <motion.div
                                 className="absolute right-20 bottom-0 pointer-events-none"
                                 animate={{ y: [0, -8, 0], rotate: [-10, -6, -10] }}
                                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
@@ -173,7 +180,7 @@ export default function HeroSection() {
                             <a href="https://www.facebook.com/iupku/" target="_blank" rel="noopener noreferrer">
                                 <Image src="/facebook.png" alt="Facebook" width={28} height={28} />
                             </a>
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/ske.updates/" target="_blank" rel="noopener noreferrer">
                                 <Image src="/instagram.svg" alt="Instagram" width={28} height={28} />
                             </a>
                         </div>

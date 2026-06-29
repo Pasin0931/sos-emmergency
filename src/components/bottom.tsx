@@ -43,12 +43,12 @@ export default function BottomSection() {
                     <a href="https://www.facebook.com/iupku/" target="_blank" rel="noopener noreferrer">
                         <Image src="/facebook.png" alt="Facebook" width={28} height={28} />
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/ske.updates/" target="_blank" rel="noopener noreferrer">
                         <Image src="/instagram.svg" alt="Instagram" width={28} height={28} />
                     </a>
-                    <a href="mailto:contact@example.com" aria-label="Email" className="hover:text-white transition-colors">
+                    {/* <a href="mailto:contact@example.com" aria-label="Email" className="hover:text-white transition-colors">
                         <Mail className="w-5 h-5" />
-                    </a>
+                    </a> */}
                 </div>
 
                 <p className="text-xs text-[#F8ECCD]/60 pt-2">

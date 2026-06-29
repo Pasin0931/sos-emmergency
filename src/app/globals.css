@@ -120,30 +120,42 @@
 .pirate-scrollbar::-webkit-scrollbar {
   width: 12px;
 }
+
 .pirate-scrollbar::-webkit-scrollbar-track {
-  background: rgba(88, 54, 27, 0.15);
+  background: rgba(88, 54, 27, 0);
   border-radius: 999px;
 }
+
 .pirate-scrollbar::-webkit-scrollbar-thumb {
-  background: oklch(0.556 0 0);
-  border: 2px solid oklch(0.556 0 0);
+  background: #9C5F33;
+  border: 2px solid rgba(88, 54, 27, 0);
   border-radius: 999px;
 }
+
 .pirate-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.556 0 0);
+  background: rgba(88, 54, 27, 0);
 }
+
 .pirate-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: oklch(0.556 0 0) rgba(88, 54, 27, 0.15);
+  scrollbar-width: thick;
+  scrollbar-color: #9C5F33 rgba(88, 54, 27, 0);
+}
+
+.pirate-scrollbar::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }

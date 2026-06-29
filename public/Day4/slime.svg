@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+    <radialGradient id="slimeGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#F0C040"/>
+      <stop offset="60%" stop-color="#D9A441"/>
+      <stop offset="100%" stop-color="#B5841A"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Slime blob - asymmetric blobby shape with bumps -->
+    <path d="
+      M128,72
+      Q148,68 158,78
+      Q172,72 178,88
+      Q190,96 185,112
+      Q196,122 188,136
+      Q192,150 178,158
+      Q174,172 160,174
+      Q150,188 136,182
+      Q126,192 114,184
+      Q100,186 92,172
+      Q78,166 80,150
+      Q68,138 76,124
+      Q70,110 82,102
+      Q80,86 94,82
+      Q104,68 116,70
+      Q122,68 128,72 Z"
+      fill="url(#slimeGrad)" stroke="#8B5E34" stroke-width="5"/>
+    <!-- Highlight blob on slime -->
+    <path d="M112,88 Q128,80 148,90 Q152,100 140,104 Q124,100 112,88 Z"
+          fill="#F0C040" opacity="0.5"/>
+    <!-- Slime eyes (cute little dots) -->
+    <circle cx="116" cy="122" r="6" fill="#6B4423"/>
+    <circle cx="140" cy="118" r="6" fill="#6B4423"/>
+    <!-- Highlight glints -->
+    <circle cx="118" cy="120" r="2" fill="#FBF3DE"/>
+    <circle cx="142" cy="116" r="2" fill="#FBF3DE"/>
+    <!-- Simple smile -->
+    <path d="M116,138 Q128,148 140,138" fill="none" stroke="#6B4423" stroke-width="4"/>
+  </g>
+</svg>

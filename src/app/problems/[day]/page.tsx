@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 
+import { isDayUnlocked, unlockLabel } from "@/lib/daylib";
+
 type ProblemCard = {
   title: string;
   description: string;
@@ -25,6 +27,39 @@ export default function Problem() {
 
   if (!Number.isInteger(day) || day < 1 || day > 4) {
     return void notFound();
+  }
+
+  if (!isDayUnlocked(day)) {
+    // alert(day)
+    return (
+      <div className="relative flex flex-col justify-center items-center h-screen bg-[#F8ECCD] text-center px-6 overflow-hidden">
+        <Image
+          className="fixed inset-0 opacity-15 z-0 w-full h-full object-cover select-none"
+          src="/wm_dot.png"
+          alt=""
+          fill
+          priority
+          draggable={false}
+        />
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#AD5A2C" className="z-10 w-16 h-16 mb-4">
+          <path
+            fillRule="evenodd"
+            d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z"
+            clipRule="evenodd"
+          />
+        </svg>
+        <h1 className="z-10 font-bold text-5xl text-[#AD5A2C] mb-2">Not yet, sailor</h1>
+        <p className="z-10 text-2xl text-[#6E4220]">
+          Day {day} unlocks on {unlockLabel(day)}.
+        </p>
+        <Link
+          href="/"
+          className="z-10 mt-6 px-5 py-3 bg-[#9C5F33] border-2 border-[#58361B] rounded-xl text-[#F8ECCD] font-bold hover:bg-[#6E4220] transition-colors"
+        >
+          ← Back
+        </Link>
+      </div>
+    );
   }
 
   let day_problems: ProblemCard[] = [];
@@ -151,186 +186,305 @@ export default function Problem() {
   } else if (day === 2) {
     day_problems = [
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Booleans",
+        description: "Logical Connectives with True and False",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/kzqpawyqcm/",
+        img_url: "/Day2/booleans.svg",
         level: "Foundation",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "If Elif Else",
+        description: "Core component of all the algorithm.",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/e8nbdyxmsi/",
+        img_url: "/Day2/if-elif-else.svg",
         level: "Foundation",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "List Access",
+        description: "Access elements in a list using index positions",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
-        level: "Easy",
+        url: "https://elabsheet.org/elab/taskpads/show/jyjevp05vh/",
+        img_url: "/Day2/list-access.svg",
+        level: "Foundation",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "List Modify",
+        description: "Add, remove, and change elements in a list",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
-        level: "Easy",
+        url: "https://elabsheet.org/elab/taskpads/show/pns6uqkt8o/",
+        img_url: "/Day2/list-modify.svg",
+        level: "Foundation",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "List Slicing",
+        description: "Extract portions of a list using slice notation",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/45ox21th5n/",
+        img_url: "/Day2/list-slicing.svg",
+        level: "Foundation",
+      },
+      {
+        title: "List to String",
+        description: "Convert a list of values into a single joined string",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/be6vhfio37/",
+        img_url: "/Day2/list-to-string.svg",
+        level: "Foundation",
+      },
+      {
+        title: "Dictionary",
+        description: "It's like a list, but with a cooler label!",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/ph1tv7rk8e/",
+        img_url: "/Day2/dictionary.svg",
+        level: "Foundation",
+      },
+      {
+        title: "For Loop",
+        description: "Repeat any code with a few line.",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/fc677qv4p4/",
+        img_url: "/Day2/for-loop.svg",
+        level: "Foundation",
+      },
+      {
+        title: "No Cheese",
+        description: "Apply conditions and loops to filter out the unwanted",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/dya0jenvao/",
+        img_url: "/Day2/no-cheese.svg",
         level: "Normal",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Bar Chart",
+        description: "Draw a bar chart using loops and print statements",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/tf057r0qer/",
+        img_url: "/Day2/bar-chart.svg",
         level: "Normal",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "IP Address",
+        description: "Parse and validate IP address strings",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/ha3gxrs9ka/",
+        img_url: "/Day2/ip-address.svg",
         level: "Normal",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Stairs",
+        description: "Print a staircase pattern using loops",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/xfqvlawg68/",
+        img_url: "/Day2/stairs.svg",
+        level: "Normal",
+      },
+      {
+        title: "Binary",
+        description: "Convert numbers into their binary representation",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/qibdsxgklx/",
+        img_url: "/Day2/binary.svg",
         level: "Hard",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Pyramid",
+        description: "Build a pyramid pattern using nested loops and spacing",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
-        level: "Extra",
-      },
-      {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
-        status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
-        level: "Extra",
-      },
-      {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
-        status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
-        level: "Extra",
+        url: "https://elabsheet.org/elab/taskpads/show/s9ihqzjbgv/",
+        img_url: "/Day2/pyramid.svg",
+        level: "Hard",
       },
     ];
   } else if (day === 4) {
     day_problems = [
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Addition",
+        description: "Add two numbers together using basic arithmetic",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
-        level: "Foundation",
-      },
-      {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
-        status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/ntq5dc4xir/",
+        img_url: "/Day4/addition.svg",
         level: "Easy",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Odd or Even?",
+        description: "Determine whether a number is odd or even",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/8h6n2d80f7/",
+        img_url: "/Day4/odd-or-even.svg",
+        level: "Easy",
+      },
+      {
+        title: "Score",
+        description: "Calculate and evaluate a score based on given conditions",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/xqu0a7wi4k/",
+        img_url: "/Day4/score.svg",
+        level: "Easy",
+      },
+      {
+        title: "Fox and Rabbit",
+        description: "Simulate the interaction between a fox and a rabbit",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/eogtc3wkyb/",
+        img_url: "/Day4/fox-and-rabbit.svg",
+        level: "Easy",
+      },
+      {
+        title: "Week",
+        description: "Map numbers to days of the week using conditionals",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/t97v9b4uam/",
+        img_url: "/Day4/week.svg",
+        level: "Easy",
+      },
+      {
+        title: "Three Numbers",
+        description: "Analyze three numbers to find patterns and results",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/k4tsnoet3h/",
+        img_url: "/Day4/three-numbers.svg",
         level: "Normal",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Incorrect Sum",
+        description: "Find and fix an incorrect sum in a sequence",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/efdf7dao5h/",
+        img_url: "/Day4/incorrect-sum.svg",
+        level: "Normal",
+      },
+      {
+        title: "Word Chain",
+        description: "Link words together where each word starts with the last letter of the previous",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/gi2zw97996/",
+        img_url: "/Day4/word-chain.svg",
+        level: "Normal",
+      },
+      {
+        title: "Snakes",
+        description: "Navigate a snake through a grid using logic and loops",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/j97ydjk25a/",
+        img_url: "/Day4/snakes.svg",
         level: "Hard",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Boxed Out",
+        description: "Determine which elements fall outside a defined boundary",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/bz2czj7yh4/",
+        img_url: "/Day4/boxed-out.svg",
+        level: "Hard",
+      },
+      {
+        title: "Slime",
+        description: "Model slime growth or spread using recursive logic",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/lzcno4nymf/",
+        img_url: "/Day4/slime.svg",
+        level: "Extra",
+      },
+      {
+        title: "Sweet Swipe",
+        description: "Swipe the right sweets using pattern matching and conditions",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/0az2kmxz4e/",
+        img_url: "/Day4/sweet-swipe.svg",
         level: "Extra",
       },
     ];
   } else if (day === 3) {
     day_problems = [
       {
-        title: "Length of String",
-        description:
-          "A set is like the evolutionary step backward from a list—no order, no duplicates, just raw values.",
+        title: "While Loops",
+        description: "Repeat code using while loops until a condition becomes false",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/yvgkutrw8y/",
+        img_url: "/Day2/while-loops.svg",
+        level: "Foundation",
+      },
+      {
+        title: "Try Except",
+        description: "Handle errors gracefully using try and except blocks",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/1hhdu8uopg/",
+        img_url: "/Day2/try-except.svg",
+        level: "Foundation",
+      },
+      {
+        title: "Function",
+        description: "Define reusable blocks of code with functions",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/5abdcke3wc/",
+        img_url: "/Day2/function.svg",
+        level: "Foundation",
+      },
+      {
+        title: "Math",
+        description: "Apply mathematical operations and the math module to solve problems",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/k1g0g2zjb5/",
+        img_url: "/Day2/math.svg",
         level: "Normal",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Random: Numbers",
+        description: "Generate random numbers using Python's random module",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/no8cfnz9mq/",
+        img_url: "/Day2/random-numbers.svg",
         level: "Normal",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Random: Choices",
+        description: "Pick random elements from a sequence using random.choice",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/k7e7p46ppg/",
+        img_url: "/Day2/random-choices.svg",
+        level: "Normal",
+      },
+      {
+        title: "Cashier",
+        description: "Simulate a cashier system combining loops, functions, and math",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/ectgyw2cly/",
+        img_url: "/Day2/cashier.svg",
         level: "Hard",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Factory",
+        description: "Model a factory production line using functions and logic",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/brbjtbbu3h/",
+        img_url: "/Day2/factory.svg",
         level: "Hard",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Parkour",
+        description: "Navigate through a series of tricky coding obstacles",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/7err482uzo/",
+        img_url: "/Day2/parkour.svg",
+        level: "Hard",
+      },
+      {
+        title: "RPG",
+        description: "Build a text-based RPG using everything you've learned",
+        status: false,
+        url: "https://elabsheet.org/elab/taskpads/show/fzk9jaiap2/",
+        img_url: "/Day2/rpg.svg",
         level: "Extra",
       },
       {
-        title: "Length of String",
-        description: "Understand basics of python variable types",
+        title: "Texting Texting",
+        description: "Simulate a messaging system with functions and string manipulation",
         status: false,
-        url: "https://plummet",
-        img_url: "/Aa.png",
+        url: "https://elabsheet.org/elab/taskpads/show/l1ys7y295y/",
+        img_url: "/Day2/texting-texting.svg",
         level: "Extra",
       },
     ];
@@ -557,8 +711,8 @@ export default function Problem() {
       </div>
 
       <Card
-        className="z-30 mt-5 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 h-[70vh] max-w-8xl px-10 py-9 overflow-y-auto pirate-scrollbar border-4 border-gray-500 gap-6
-  bg-[#d3d3d3]/30 rounded-4xl"
+        className="z-30 mt-5 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 h-[70vh] max-w-8xl px-10 py-9 overflow-y-auto border-4 border-gray-500 gap-6
+      bg-[#d3d3d3]/30 rounded-4xl pirate-scrollbar"
       >
         {problem_cards.map((card, index) => (
           <motion.div

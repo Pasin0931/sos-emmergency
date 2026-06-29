@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Fox face (left) -->
+    <circle cx="90" cy="130" r="28" fill="#B5651D" stroke="#6B4423" stroke-width="5"/>
+    <!-- Fox pointy ears -->
+    <polygon points="72,110 64,80 86,100" fill="#B5651D" stroke="#6B4423" stroke-width="4"/>
+    <polygon points="108,110 116,80 94,100" fill="#B5651D" stroke="#6B4423" stroke-width="4"/>
+    <!-- Fox inner ears -->
+    <polygon points="74,108 68,86 84,101" fill="#E59BB5" stroke="none"/>
+    <polygon points="106,108 112,86 96,101" fill="#E59BB5" stroke="none"/>
+    <!-- Fox eyes -->
+    <circle cx="82" cy="126" r="4" fill="#6B4423"/>
+    <circle cx="98" cy="126" r="4" fill="#6B4423"/>
+    <!-- Fox snout -->
+    <ellipse cx="90" cy="140" rx="10" ry="6" fill="#FBF3DE" stroke="#6B4423" stroke-width="3"/>
+    <circle cx="90" cy="138" r="3" fill="#6B4423"/>
+
+    <!-- Divider -->
+    <line x1="128" y1="110" x2="128" y2="158" stroke="#8B5E34" stroke-width="2" opacity="0.5"/>
+
+    <!-- Rabbit face (right) -->
+    <circle cx="166" cy="130" r="28" fill="#FBF3DE" stroke="#6B4423" stroke-width="5"/>
+    <!-- Rabbit long ears -->
+    <ellipse cx="156" cy="92" rx="8" ry="22" fill="#FBF3DE" stroke="#6B4423" stroke-width="4"/>
+    <ellipse cx="176" cy="92" rx="8" ry="22" fill="#FBF3DE" stroke="#6B4423" stroke-width="4"/>
+    <!-- Rabbit inner ears -->
+    <ellipse cx="156" cy="92" rx="4" ry="16" fill="#E59BB5" stroke="none"/>
+    <ellipse cx="176" cy="92" rx="4" ry="16" fill="#E59BB5" stroke="none"/>
+    <!-- Rabbit eyes -->
+    <circle cx="158" cy="126" r="4" fill="#6B4423"/>
+    <circle cx="174" cy="126" r="4" fill="#6B4423"/>
+    <!-- Rabbit nose -->
+    <ellipse cx="166" cy="137" rx="5" ry="4" fill="#E59BB5" stroke="#6B4423" stroke-width="2"/>
+  </g>
+</svg>

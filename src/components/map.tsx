@@ -47,7 +47,7 @@ export default function NavigateSection() {
                     </svg>
 
                     {days.map((d, i) => {
-                        const unlocked = isDayUnlocked(d.day);
+                        const unlocked = isDayUnlocked(d.day)
 
                         return (
                             <motion.div

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Trophy cup body -->
+    <path d="M100,78 L156,78 L150,130 Q148,148 128,152 Q108,148 106,130 Z" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <!-- Left handle -->
+    <path d="M100,90 Q76,90 76,110 Q76,130 100,128" fill="none" stroke="#6B4423" stroke-width="5"/>
+    <!-- Right handle -->
+    <path d="M156,90 Q180,90 180,110 Q180,130 156,128" fill="none" stroke="#6B4423" stroke-width="5"/>
+    <!-- Stem -->
+    <rect x="120" y="152" width="16" height="22" fill="#D9A441" stroke="#6B4423" stroke-width="4"/>
+    <!-- Base -->
+    <rect x="104" y="174" width="48" height="10" rx="4" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <!-- Star accent on cup -->
+    <polygon points="128,96 132,108 144,108 134,116 138,128 128,120 118,128 122,116 112,108 124,108" fill="#FBF3DE" opacity="0.8"/>
+  </g>
+</svg>

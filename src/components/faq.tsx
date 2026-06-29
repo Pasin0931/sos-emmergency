@@ -75,8 +75,8 @@ export default function FAQSection() {
 
             {/* Croc mascot */}
             <motion.div
-                className="absolute z-10 -left-0 top-1/4 -translate-y-1/2 pointer-events-none"
-                animate={{ y: [0, -16, 0], rotate: [-45, -40, -45, -50, -45] }}
+                className="absolute z-10 -left-0 top-2/4 -translate-y-1/2 pointer-events-none"
+                animate={{ y: [0, -16, 0], rotate: [-15, -10, -15, -10, -15] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
             >
                 <Image
@@ -91,12 +91,26 @@ export default function FAQSection() {
             {/* Monkey mascot */}
             <motion.div
                 className="absolute z-10 -right-0 top-3/4 -translate-y-1/2 pointer-events-none"
-                animate={{ y: [0, -16, 0], rotate: [45, 40, 45, 50, 45] }}
+                animate={{ y: [0, -16, 0], rotate: [15, 10, 15, 10, 15] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
             >
                 <Image
                     src="/monkey.png"
                     alt="Monkey mascot"
+                    width={200}
+                    height={200}
+                    className="w-56 md:w-70 h-auto"
+                />
+            </motion.div>
+
+            <motion.div
+                className="absolute z-10 -right-0 top-1/4 -translate-y-1/2 pointer-events-none"
+                animate={{ y: [0, -16, 0], rotate: [10, 15, 10, 15, 10] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+            >
+                <Image
+                    src="/Mascot.png"
+                    alt="racoon mascot"
                     width={200}
                     height={200}
                     className="w-56 md:w-70 h-auto"

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="face" cx="42%" cy="38%" r="70%">
+      <stop offset="0%" stop-color="#FBF3DE"/>
+      <stop offset="70%" stop-color="#F1E3C2"/>
+      <stop offset="100%" stop-color="#E4D0A4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="128" cy="128" r="118" fill="#6E3D14"/>
+  <circle cx="128" cy="128" r="112" fill="#9A571E"/>
+  <circle cx="128" cy="128" r="100" fill="url(#face)" stroke="#6E3D14" stroke-width="2"/>
+  <circle cx="128" cy="128" r="100" fill="none" stroke="#E4D0A4" stroke-width="6" stroke-dasharray="2 7" opacity="0.7"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Three array boxes -->
+    <rect x="58" y="108" width="44" height="44" rx="5" fill="#FBF3DE" stroke="#6B4423" stroke-width="5"/>
+    <rect x="106" y="108" width="44" height="44" rx="5" fill="#FBF3DE" stroke="#6B4423" stroke-width="5"/>
+    <rect x="154" y="108" width="44" height="44" rx="5" fill="#D9A441" stroke="#6B4423" stroke-width="5"/>
+    <!-- Pencil icon on rightmost box -->
+    <!-- Pencil body -->
+    <rect x="167" y="76" width="10" height="26" rx="2" fill="#B5651D" stroke="#6B4423" stroke-width="3" transform="rotate(-30 172 89)"/>
+    <!-- Pencil tip -->
+    <polygon points="160,96 168,100 163,106" fill="#6B4423"/>
+    <!-- Pencil eraser -->
+    <rect x="169" y="70" width="10" height="7" rx="2" fill="#E59BB5" stroke="#6B4423" stroke-width="3" transform="rotate(-30 174 73)"/>
+  </g>
+</svg>
