@@ -1,6 +1,6 @@
 export const DAY_UNLOCKS: Record<number, Date> = {
   1: new Date(2026, 5, 29),
-  2: new Date(2026, 5, 2), 
+  2: new Date(2026, 6, 2), 
   3: new Date(2026, 6, 3), 
   4: new Date(2026, 6, 4), 
 }
