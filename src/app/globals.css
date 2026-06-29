@@ -117,6 +117,26 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.pirate-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+.pirate-scrollbar::-webkit-scrollbar-track {
+  background: rgba(88, 54, 27, 0.15);
+  border-radius: 999px;
+}
+.pirate-scrollbar::-webkit-scrollbar-thumb {
+  background: oklch(0.556 0 0);
+  border: 2px solid oklch(0.556 0 0);
+  border-radius: 999px;
+}
+.pirate-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.556 0 0);
+}
+.pirate-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.556 0 0) rgba(88, 54, 27, 0.15);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

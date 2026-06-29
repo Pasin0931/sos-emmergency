@@ -557,8 +557,8 @@ export default function Problem() {
       </div>
 
       <Card
-        className="z-30 mt-5 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 h-[70vh] max-w-8xl px-10 py-9 overflow-y-auto border-4 border-gray-500 gap-6
-      bg-[#d3d3d3]/30 rounded-4xl"
+        className="z-30 mt-5 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 h-[70vh] max-w-8xl px-10 py-9 overflow-y-auto pirate-scrollbar border-4 border-gray-500 gap-6
+  bg-[#d3d3d3]/30 rounded-4xl"
       >
         {problem_cards.map((card, index) => (
           <motion.div

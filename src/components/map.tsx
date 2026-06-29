@@ -7,10 +7,10 @@ import Link from "next/link"
 import { isDayUnlocked, unlockLabel } from "@/lib/daylib"
 
 const days = [
-    { day: 1, subtitle: "Day 1", mascot: "/croc.png", left: "8%", top: "20%" },
-    { day: 2, subtitle: "Day 2", mascot: "/monkey.png", left: "35%", top: "75%" },
-    { day: 3, subtitle: "Day 3", mascot: "/croc.png", left: "65%", top: "20%" },
-    { day: 4, subtitle: "Day 4", mascot: "/monkey.png", left: "92%", top: "75%" },
+    { day: 1, subtitle: "Day 1", img: "/map_day1.png", left: "8%", top: "20%" },
+    { day: 2, subtitle: "Day 2", img: "/map_day2.png", left: "35%", top: "75%" },
+    { day: 3, subtitle: "Day 3", img: "/map_day3.png", left: "65%", top: "20%" },
+    { day: 4, subtitle: "Day 4", img: "/map_day4.png", left: "92%", top: "75%" },
 ];
 
 export default function NavigateSection() {
@@ -58,11 +58,28 @@ export default function NavigateSection() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.3, delay: i * 0.15, ease: "easeOut" }}
+                                whileHover={
+                                    unlocked
+                                        ? {
+                                              y: [0, -4, 0, -4, 0],
+                                              transition: { duration: 1.4, ease: "easeInOut", repeat: Infinity },
+                                          }
+                                        : undefined
+                                }
                             >
                                 {unlocked ? (
-                                    <Link href={`/problems/${d.day}`} className="flex flex-col items-center -translate-x-1/2 -translate-y-1/2 group">
-                                        <div className="relative flex flex-col items-center justify-center w-28 h-28 rounded-full border-4 border-[#58361B] bg-[#9C5F33] text-[#F8ECCD] shadow-lg group-hover:bg-[#6E4220] transition-colors">
-                                            <span className="text-3xl font-bold">{d.day}</span>
+                                    <Link
+                                        href={`/problems/${d.day}`}
+                                        className="flex flex-col items-center -translate-x-1/2 -translate-y-1/2 group transition-[filter] hover:[filter:drop-shadow(0_0_6px_white)_drop-shadow(0_0_12px_white)]"
+                                    >
+                                        <div className="relative border border-[#58361B] border-3 rounded-xl pl-20 bg-[#EBD3A7] w-40 h-40">
+                                            <Image
+                                                src={d.img}
+                                                alt={d.subtitle}
+                                                fill
+                                                sizes="128px"
+                                                className="object-contain p-2"
+                                            />
                                         </div>
                                         <span className="mt-2 px-6 py-1 rounded-md bg-[#9C5F33] border-3 border-[#58361B] text-[#F8ECCD] text-sm font-bold whitespace-nowrap shadow-lg group-hover:bg-[#6E4220] transition-colors">
                                             {d.subtitle}
@@ -73,12 +90,12 @@ export default function NavigateSection() {
                                         className="flex flex-col items-center -translate-x-1/2 -translate-y-1/2 cursor-not-allowed select-none"
                                         title={`Unlocks ${unlockLabel(d.day)}`}
                                     >
-                                        <div className="relative flex flex-col items-center justify-center w-28 h-28 rounded-full border-4 border-[#58361B] bg-black text-gray-500 shadow-lg">
+                                        <div className="relative flex flex-col items-center justify-center w-40 h-40 rounded-xl border-3 border-[#242424] bg-black text-gray-500 shadow-lg">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
                                                 <path fillRule="evenodd" d="M12 1.5a5.25 5.25 0 0 0-5.25 5.25v3a3 3 0 0 0-3 3v6.75a3 3 0 0 0 3 3h10.5a3 3 0 0 0 3-3v-6.75a3 3 0 0 0-3-3v-3c0-2.9-2.35-5.25-5.25-5.25Zm3.75 8.25v-3a3.75 3.75 0 1 0-7.5 0v3h7.5Z" clipRule="evenodd" />
                                             </svg>
                                         </div>
-                                        <span className="mt-2 px-6 py-1 rounded-md bg-black border-3 border-[#58361B] text-gray-500 text-sm font-bold whitespace-nowrap shadow-lg">
+                                        <span className="mt-2 px-6 py-1 rounded-md bg-black border-3 border-[#242424] text-gray-500 text-sm font-bold whitespace-nowrap shadow-lg">
                                             {d.subtitle}
                                         </span>
                                     </div>
