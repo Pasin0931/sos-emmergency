@@ -49,6 +49,7 @@ export default function BottomSection() {
                     {/* <a href="mailto:contact@example.com" aria-label="Email" className="hover:text-white transition-colors">
                         <Mail className="w-5 h-5" />
                     </a> */}
+                    {/* <a>hello</a> */}
                 </div>
 
                 <p className="text-xs text-[#F8ECCD]/60 pt-2">
